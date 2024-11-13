@@ -1,3 +1,10 @@
+<style>
+    pre{
+        width: 90%;
+        overflow-x :auto;
+    }
+
+</style>
 # Operating Systems Banker's Algorithm
 
 This program implements the Banker's Algorithm in C++ to check for a safe sequence in a system with multiple processes and resources. It uses an input file to load the initial resource allocation, maximum demand, and available resources for each process, then determines if the system is in a safe state.
