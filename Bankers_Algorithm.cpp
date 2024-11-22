@@ -97,13 +97,11 @@ public:
 };
 
 int main() {
-    const int NUM_PROCESSES = 5; // Define number of processes
-    const int NUM_RESOURCES = 3; // Define number of resources
+    const int NUM_PROCESSES = 5;
+    const int NUM_RESOURCES = 3;
 
-    // Create an instance of BankerAlgorithm with the correct parameters
     BankerAlgorithm banker(NUM_PROCESSES, NUM_RESOURCES);
 
-    // Initialize the banker system and handle errors
     try {
         banker.initialize("Input_File.txt");
     } catch (const std::runtime_error& e) {
@@ -111,7 +109,6 @@ int main() {
         return 1;
     }
 
-    // Check if the system is in a safe state
     if (!banker.isSafe()) {
         std::cerr << "System is not in a safe state.\n";
         return 1;
